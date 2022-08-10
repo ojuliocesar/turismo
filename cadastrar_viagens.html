@@ -16,27 +16,29 @@
     <id id="container">
         <h2>Cadastro de viagens</h2>
         <form action="backend/cadastro.php" method="POST">
-            <div>
-                <label for="titulo">Título</label>
-                <input type="text" name="titulo" id="titulo">
+            <div class="input-wrapper">
+                <div>
+                    <label for="titulo">Título</label>
+                    <input type="text" name="titulo" id="titulo" required>
+                </div>
+    
+                <div>
+                    <label for="local">local</label>
+                    <input type="text" name="local" id="local" required>
+                </div>
+    
+                <div>
+                    <label for="valor">Valor</label>
+                    <input type="number" name="valor" id="valor" required>
+                </div>
+    
+                <div>
+                    <label for="desc">Descrição</label>
+                    <textarea name="desc" id="desc"></textarea>
+                </div>
             </div>
 
-            <div>
-                <label for="local">local</label>
-                <input type="text" name="local" id="local">
-            </div>
-
-            <div>
-                <label for="valor">Valor</label>
-                <input type="number" name="valor" id="valor">
-            </div>
-
-            <div>
-                <label for="desc">Descrição</label>
-                <textarea name="desc" id="desc"></textarea>
-            </div>
-
-            <input type="submit" value="Enviar">
+            <input class="button" type="submit" value="Enviar">
         </form>
     </id>
 </body>

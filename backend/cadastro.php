@@ -26,5 +26,5 @@ try {
     echo "Cadastro realizado com sucesso!";
 
 } catch (PDOException $e) {
-    $e->getMessage();
+    echo $e->getMessage();
 }
