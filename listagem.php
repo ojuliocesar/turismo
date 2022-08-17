@@ -5,7 +5,7 @@ require_once('backend/conexao.php');
 try {
     $sql = "SELECT * FROM tb_viagens ORDER BY data_cadastro DESC";
 
-    $comando = $conn->prepare($sql);
+    $comando = $con->prepare($sql);
 
     $comando->execute();
 

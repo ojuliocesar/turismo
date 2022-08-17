@@ -1,19 +1,17 @@
 <?php
 
-try {
-    // Dados da conexão copm o Banco de Dados
-    DEFINE('SERVER', 'localhost');
-    DEFINE('DATABASE', 'db_turismo');
-    DEFINE('USER', 'root');
-    DEFINE('PASSWORD', '');
+try{
+    // dados da conexao com o banco
+    define('SERVIDOR','localhost');
+    define('USUARIO','root');
+    define('SENHA','');
+    define('BASEDADOS','db_turismo');
 
-    // Conexão com o Banco de Dados
-    $conn = new PDO("mysql:host=" . SERVER . ";dbname=" . DATABASE . "", USER, PASSWORD);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $con = new PDO("mysql:host=".SERVIDOR.";dbname=".BASEDADOS, USUARIO, SENHA);
+    // set the PDO error mode to exception
+    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // echo "Conexão foi bem sucedida! ";
 
-    // $conn = null;
-
-} catch (PDOException $e) {
-    echo 'Connection failed: ' .  $e->getMessage();
-    die();
+}catch(PDOException $e){
+    echo "Erro ao conectar: ".$e->getMessage();
 }

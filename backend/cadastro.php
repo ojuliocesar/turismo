@@ -17,7 +17,7 @@ try {
             ('$titulo', '$local', $valor, '$desc')";
 
     // Prepara a execução da query SQL acima
-    $comando = $conn->prepare($sql);
+    $comando = $con->prepare($sql);
 
     // Execute o comando com a query no Banco de Dados
     $comando->execute();
