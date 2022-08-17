@@ -6,7 +6,7 @@ $email = $_POST['email'];
 $senha = $_POST['senha'];
 
 try {
-    $sql = "SELECT * FROM tb_login WHERE email = '$email' AND senha = '$senha'";
+    $sql = "SELECT * FROM tb_login WHERE email = '$email' AND senha = '$senha' AND ativo = 1";
 
     $comands = $con->prepare($sql);
 
@@ -14,12 +14,18 @@ try {
 
     $data = $comands->fetchAll(PDO::FETCH_ASSOC);
 
-    var_dump($data);
+    // Verifica se existem registros dentro da variável data
 
-    if ($comands->rowCount()) {
-        echo 'Foi';
+    // if ($comands->rowCount()) {
+    //     echo 'Foi';
+    // } else {
+    //     echo 'Não foi';
+    // }
+
+    if ($data != null) {
+        header("Location: ../admin/gerenciar_viagens.php");
     } else {
-        echo 'Não foi';
+        echo 'Usuário ou Senha inválido!';
     }
 
 } catch(PDOException $e) {
