@@ -12,11 +12,8 @@ try {
 
     $dados = $comando -> fetchAll(PDO::FETCH_ASSOC);
 
-    // echo "<pre>";
-    // var_dump($dados);
-    // echo "</pre>";
-
 } catch(PDOException $erro){
+
     echo $erro->getMessage();
 }
 
@@ -33,7 +30,7 @@ try {
 
 </head>
 <body>
-    <div id="container">
+    <div id="container-form">
         <h2>Gerenciar Viagens</h2>
 
         <div id="tabela">
@@ -71,6 +68,7 @@ try {
 
             </table>
         </div>
+        <a class="nav-button" href="cadastro_viagens.html">Cadastrar Viagens</a>
     </div>
 </body>
 </html>

@@ -15,7 +15,8 @@
 <body>
     <id id="container">
         <h2>Cadastro de Viagens</h2>
-        <form action="backend/cadastro.php" method="POST">
+        <a href="gerenciar_viagens.php">Gerenciar Viagens</a>
+        <form action="../backend/cadastro.php" method="POST" enctype="multipart/form-data">
             <div class="input-wrapper">
                 <div>
                     <label for="titulo">Título</label>
@@ -30,6 +31,11 @@
                 <div>
                     <label for="valor">Valor</label>
                     <input type="number" name="valor" id="valor" required>
+                </div>
+
+                <div>
+                    <label for="desc">Imagem</label>
+                    <input type="file" name="imagem" id="imagem" required>
                 </div>
     
                 <div>

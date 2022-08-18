@@ -11,11 +11,7 @@ try {
 
     $comando->execute();
 
-    $dados = $comando->fetchAll(PDO::FETCH_ASSOC);
-
-    // echo '<pre>';
-    //     var_dump($dados);
-    // echo '</pre>';
+    $dados = $comando->fetch(PDO::FETCH_ASSOC);
 
 } catch (PDOException $erro) {
     echo $erro->getMessage();
@@ -31,41 +27,46 @@ try {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alterar Viagens</title>
-    <link rel="stylesheet" href="../css/style-atualizar.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <div id="container">
-        <h3>Alterar Viagens</h3>
 
-        <form action="../backend/atualizar.php" method="post">
-            <div>
-                <label for="id">ID</label>
-                <input type="text" name="id" id="id" value="<?php echo $dados[0]['id'] ?>" readonly>
+    <id id="container">
+        <h2>Cadastro de Viagens</h2>
+        <a href="gerenciar_viagens.php">Gerenciar Viagens</a>
+        <form action="../backend/cadastro.php" method="POST">
+            <div class="input-wrapper">
+                <div>
+                    <label for="id">ID</label>
+                    <input type="text" name="id" id="id" value="<?php echo $dados['id'] ?>" readonly>
+                </div>
+    
+                <div>
+                    <label for="titulo">Título</label>
+                    <input type="text" name="titulo" id="titulo" value="<?php echo $dados['titulo'] ?>">
+                </div>
+    
+                <div>
+                    <label for="local">local</label>
+                    <input type="text" name="local" id="local" value="<?php echo $dados['local'] ?>">
+                </div>
+    
+                <div>
+                    <label for="valor">Valor</label>
+                    <input type="text" name="valor" id="valor" value="<?php echo $dados['valor'] ?>">
+                </div>
+
+                <div>
+                    <label for="desc">Descrição</label>
+                    <textarea name="desc" id="desc"><?= $dados['desc'] ?></textarea>
+                </div>
+    
             </div>
-            <div class="inputs">
-                <label for="titulo">Título</label>
-                <input type="text" name="titulo" id="titulo" value="<?php echo $dados[0]['titulo'] ?>">
-            </div>
-            <div class="inputs">
-                <label for="local">local</label>
-                <input type="text" name="local" id="local" value="<?php echo $dados[0]['local'] ?>">
-            </div>
-            <div class="inputs">
-                <label for="valor">Valor</label>
-                <input type="text" name="valor" id="valor" value="<?php echo $dados[0]['valor'] ?>">
-            </div>
-            <div class="inputs">
-                <label for="desc">Descrição</label>
-                <textarea name="desc" id="desc" cols="30" rows="10"><?php echo $dados[0]['desc'] ?></textarea>
-            </div>
-            <div class="inputs">
-                <input class="btn" type="submit" value="Salvar">
-            </div>
+
+            <input class="button" type="submit" value="Enviar">
         </form>
-    </div>
-
-
+    </id>
 </body>
 
 </html>

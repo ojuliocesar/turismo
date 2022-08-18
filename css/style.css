@@ -31,6 +31,9 @@ form input, form textarea {
     box-sizing: border-box;
     width: 100%;
     padding: 15px 10px;
+    border: 1px solid #3c3c3c;
+    border-radius: 3px;
+    margin-top: 4px;
 }
 
 .button {
@@ -87,6 +90,10 @@ form input, form textarea {
     background-color: #2eb356;
 }
 
+#container-form {
+    padding: 10px;
+}
+
 #tabela{
     display: grid;
     margin: 20px auto;
@@ -107,4 +114,12 @@ table{
 
 tr:hover{
     background-color: aliceblue;
+}
+
+.nav-button {
+    padding: 13px;
+    background-color: #121212;
+    color: #fff;
+    border-radius: 2px;
+    text-decoration: none;
 }
