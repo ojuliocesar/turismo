@@ -16,7 +16,7 @@ try {
 
     $comando -> execute();
 
-    header('location: ../admin/alterar-viagens.php?id='.$id);
+    header('location: ../admin/alterar_viagens.php?id='.$id);
 
 } catch(PDOException $erro){
     echo $erro->getMessage();

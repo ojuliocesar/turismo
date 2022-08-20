@@ -35,13 +35,8 @@ try {
     <id id="container">
         <h2>Cadastro de Viagens</h2>
         <a href="gerenciar_viagens.php">Gerenciar Viagens</a>
-        <form action="../backend/cadastro.php" method="POST">
+        <form action="../backend/atualizar.php" method="POST">
             <div class="input-wrapper">
-                <div>
-                    <label for="id">ID</label>
-                    <input type="text" name="id" id="id" value="<?php echo $dados['id'] ?>" readonly>
-                </div>
-    
                 <div>
                     <label for="titulo">Título</label>
                     <input type="text" name="titulo" id="titulo" value="<?php echo $dados['titulo'] ?>">

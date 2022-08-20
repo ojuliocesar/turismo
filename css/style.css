@@ -58,6 +58,11 @@ form input, form textarea {
     border-radius: 5px;
 }
 
+#grid-viagens figure img {
+    height: 250px;
+    border-radius: 3px;
+}
+
 #grid-viagens figure figcaption {
     display: flex;
     flex-direction: column;

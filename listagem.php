@@ -38,7 +38,7 @@ try {
         <div id="grid-viagens">
             <?php foreach($dados as $dadosItem): ?>
                 <figure>
-                    <img src="images/casa-de-praia-arquiteta-4.jpg" alt="Banner da viagem">
+                    <img src="images/upload/<?= $dadosItem->imagem ?>" alt="Banner da viagem">
 
                     <figcaption>
                         <h4><?= $dadosItem->titulo ?></h4>
