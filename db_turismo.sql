@@ -1,10 +1,3 @@
--- --------------------------------------------------------
--- Servidor:                     127.0.0.1
--- Versão do servidor:           10.4.22-MariaDB - mariadb.org binary distribution
--- OS do Servidor:               Win64
--- HeidiSQL Versão:              12.0.0.6468
--- --------------------------------------------------------
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
 /*!50503 SET NAMES utf8mb4 */;
@@ -14,12 +7,9 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-
--- Copiando estrutura do banco de dados para db_turismo
 CREATE DATABASE IF NOT EXISTS `db_turismo` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `db_turismo`;
 
--- Copiando estrutura para tabela db_turismo.tb_login
 CREATE TABLE IF NOT EXISTS `tb_login` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(50) NOT NULL,
@@ -27,13 +17,11 @@ CREATE TABLE IF NOT EXISTS `tb_login` (
   `ativo` bit(1) NOT NULL DEFAULT b'1',
   `data_cadastro` datetime NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela db_turismo.tb_login: ~0 rows (aproximadamente)
 INSERT INTO `tb_login` (`id`, `email`, `senha`, `ativo`, `data_cadastro`) VALUES
-	(1, 'juliocesarjc025@gmail.com', 'juliocesarjc', b'1', '2022-08-16 22:01:03');
+	(1, 'ojuliocesar@gmail.com', 'ojuliocesar321', b'1', '2022-08-16 22:01:03');
 
--- Copiando estrutura para tabela db_turismo.tb_viagens
 CREATE TABLE IF NOT EXISTS `tb_viagens` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `titulo` varchar(50) NOT NULL,
@@ -44,9 +32,8 @@ CREATE TABLE IF NOT EXISTS `tb_viagens` (
   `data_cadastro` datetime NOT NULL DEFAULT current_timestamp(),
   `imagem` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela db_turismo.tb_viagens: ~5 rows (aproximadamente)
 INSERT INTO `tb_viagens` (`id`, `titulo`, `local`, `valor`, `desc`, `status`, `data_cadastro`, `imagem`) VALUES
 	(1, 'Pacote de inverno', 'Gramado', 1700.00, '5 dias de viagem', b'1', '2022-08-02 19:49:15', '3af5e0844b8a35959679966b9c98e3ab.jpg'),
 	(3, 'Praia com a família', 'Rio de Janeiro', 5000.00, '6 dias de Hotel com café da manhã', b'1', '2022-08-02 19:51:09', 'b80bf29d71d8ac975916761a53491c3b.jpg'),

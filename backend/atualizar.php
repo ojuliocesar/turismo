@@ -4,7 +4,7 @@ include ('conexao.php');
 
 try {
 
-    $id = $_POST['id'];
+    $id = $_GET['id'];
     $titulo = $_POST['titulo'];
     $local = $_POST['local'];
     $valor = $_POST['valor'];

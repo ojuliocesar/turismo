@@ -51,7 +51,7 @@ try {
     $con = null;
 
     // Exibe a mensagem de sucesso ao inserir
-    header("Location: ../listagem.php");
+    header("Location: ../index.php");
 
 } catch (PDOException $e) {
     echo $e->getMessage();

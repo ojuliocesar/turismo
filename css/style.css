@@ -59,7 +59,7 @@ form input, form textarea {
 }
 
 #grid-viagens figure img {
-    height: 250px;
+    height: 300px;
     border-radius: 3px;
 }
 
@@ -106,6 +106,7 @@ form input, form textarea {
 
 #tabela tr td, #tabela tr th{
     padding: 10px;
+    cursor: pointer;
 }
 
 table{

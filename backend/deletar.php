@@ -9,9 +9,9 @@ try {
 
     $sql = "DELETE FROM tb_viagens WHERE id = $id;";
 
-    $comando = $con -> prepare($sql);
+    $comando = $con->prepare($sql);
 
-    $comando -> execute();
+    $comando->execute();
 
     header('location: ../admin/gerenciar_viagens.php');
 

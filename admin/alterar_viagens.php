@@ -35,7 +35,7 @@ try {
     <id id="container">
         <h2>Cadastro de Viagens</h2>
         <a href="gerenciar_viagens.php">Gerenciar Viagens</a>
-        <form action="../backend/atualizar.php" method="POST">
+        <form action="../backend/atualizar.php?id=<?= $id ?>" method="POST">
             <div class="input-wrapper">
                 <div>
                     <label for="titulo">Título</label>
