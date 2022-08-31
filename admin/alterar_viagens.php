@@ -35,7 +35,7 @@ try {
     <id id="container">
         <h2>Cadastro de Viagens</h2>
         <a href="gerenciar_viagens.php">Gerenciar Viagens</a>
-        <form action="../backend/atualizar.php?id=<?= $id ?>" method="POST">
+        <form class="form-update" action="../backend/atualizar.php?id=<?= $id ?>" method="POST" enctype="multipart/form-data">
             <div class="input-wrapper">
                 <div>
                     <label for="titulo">Título</label>
@@ -45,6 +45,13 @@ try {
                 <div>
                     <label for="local">local</label>
                     <input type="text" name="local" id="local" value="<?php echo $dados['local'] ?>">
+                </div>
+
+                <div>
+                    <label for="local">Imagem</label>
+
+                    <img src="../images/upload/<?= $dados['imagem'] ?>" alt="">
+                    <input type="file" name="imagem" id="imagem">
                 </div>
     
                 <div>

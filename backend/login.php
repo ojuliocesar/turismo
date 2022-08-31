@@ -23,7 +23,12 @@ try {
     // }
 
     if ($data != null) {
+        session_start();
+
+        $_SESSION['usuario'] = $email;
+
         header("Location: ../admin/gerenciar_viagens.php");
+        
     } else {
         echo 'Usuário ou Senha inválido!';
     }

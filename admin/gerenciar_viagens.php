@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+require_once('../backend/user_controller.php');
 
 include '../backend/conexao.php';
 
@@ -53,12 +55,12 @@ try {
                     <td><?php echo $d['valor']?></td>
                     <td><?php echo $d['desc']?></td>
                     <td>
-                        <a href="../admin/alterar_viagens.php?id=<?php echo $d['id']?>">
+                        <a class="table-action update" href="../admin/alterar_viagens.php?id=<?php echo $d['id']?>">
                             Alterar
                         </a>
                     </td>
                     <td>
-                        <a href="../backend/deletar.php?id=<?php echo $d['id']?>">
+                        <a class="table-action delete" href="../backend/deletar.php?id=<?php echo $d['id']?>">
                             Deletar
                         </a>
                     </td>
@@ -68,7 +70,8 @@ try {
 
             </table>
         </div>
-        <a class="nav-button" href="cadastro_viagens.html">Cadastrar Viagens</a>
+        <a class="nav-button" href="cadastro_viagens.php">Cadastrar Viagens</a>
+        <a class="nav-loggout" href="../backend/loggout.php">Sair</a>
     </div>
 </body>
 </html>
