@@ -1,11 +1,12 @@
 <?php
 
+// Inicia a sessão
 session_start();
 
 if (isset($_SESSION['usuario'])) {
     header("Location: ./gerenciar_viagens.php");
 }
-
+ 
 ?>
 
 <!DOCTYPE html>

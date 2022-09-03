@@ -1,4 +1,7 @@
 <?php
+
+require_once('../backend/user_controller.php');
+
 include '../backend/conexao.php';
 
 $id = $_GET['id'];
